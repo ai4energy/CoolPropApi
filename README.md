@@ -42,11 +42,11 @@ version: "3.2"
 services: 
 
   mediacoolprop:
-    image: mediacoolprop:1.0
-    container_name: mediacoolprop
+    image: coolpropapi:1.0
+    container_name: coolpropapi
     build:
-      context: ./juliasrc
-    command: julia --project="/opt/MediaCoolProp" mediacoolprop.jl
+      context: .
+    command: julia --project="/opt/coolpropapi" apiserver.jl
     ports:
       - "8081:8081"
 ```
