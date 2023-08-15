@@ -36,12 +36,14 @@
 
 ## 启动服务
 
+使用如下的`docker-compose.yml`文件启动服务
+
 ```yaml
 version: "3.2"
 
 services: 
 
-  mediacoolprop:
+  coolpropapi:
     image: coolpropapi:1.0
     container_name: coolpropapi
     build:
@@ -50,3 +52,4 @@ services:
     ports:
       - "8081:8081"
 ```
+然后在浏览器中输入`http://localhost:8081/water`访问，就可以看到测试函数的结果了。

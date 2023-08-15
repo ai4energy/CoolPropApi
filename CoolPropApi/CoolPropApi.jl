@@ -1,3 +1,3 @@
 module CoolPropApi
-greet() = print("Hello World!")
+using CoolProp
 end # module CoolPropApi  
