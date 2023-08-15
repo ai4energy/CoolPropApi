@@ -1,0 +1,12 @@
+version: "3.2"
+
+services: 
+
+  mediacoolprop:
+    image: coolpropapi:1.0
+    container_name: coolpropapi
+    build:
+      context: .
+    command: julia --project="/opt/coolpropapi" apiserver.jl
+    ports:
+      - "8081:8081"
